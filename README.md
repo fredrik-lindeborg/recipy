@@ -1,16 +1,16 @@
 # Reci.py
 
-# Requirements
+## Requirements
 
 Python3.3+
 
 pip install -r requirements.txt
 
-# To run the application
+## To run the application
 
 python3 main.py
 
 
-# To use the application
+## To use the application
 
 By default it is served on http://127.0.0.1:8080
