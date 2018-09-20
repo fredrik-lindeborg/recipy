@@ -1,0 +1,51 @@
+## -*- coding: utf-8 -*-
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>RECI.PY</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <div class="container top">
+      <h1>reci.py</h1>
+    </div>
+    <div class="container">
+      <form method="POST" action="">
+        <div class="input-group">
+          <input type="text" name="search" class="form-control" placeholder="Search for..." aria-label="Search for..." value="${ search if search else '' }">
+          <span class="input-group-btn">
+            <button class="btn btn-secondary" type="submit">Go!</button>
+          </span>
+        </div>
+      </form>
+    </div>
+    %if recipes:
+    <div class="container recipes">
+      %for recipe in recipys:
+        % if recipe.get('img'):
+          <article class="recipe">
+            <div class="img-wrapper">
+              <a href="${recipe.get('link')}" target="_blank">
+                <img src="${recipe.get('img')}">
+              </a>
+            </div>
+            <div class="recipe-text">
+              <a href="${recipe.get('link')}" target="_blank">
+                <h2>${recipe.get('title')}</h2>
+              </a>
+            </div>
+          </article>
+        % endif
+      %endfor
+    </div>
+    %endif
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  </body>
+</html>

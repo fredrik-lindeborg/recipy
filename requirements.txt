@@ -1,0 +1,3 @@
+cherrypy==18.0.0            # sync web framwork
+mako==1.0.6                 # template engine
+beautifulsoup4==4.6.0       # web crawling framework
