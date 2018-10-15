@@ -74,7 +74,7 @@ class Crawler(object):
             recipe_class="recipe",
             source="jamieoliver.com",
             img_prefix="",
-            titel_tag="",
+            title_tag="",
             title_class="",
             img_class="img-responsive",
             results=results
