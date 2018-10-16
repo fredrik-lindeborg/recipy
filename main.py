@@ -12,7 +12,7 @@ class Main(object):
             c = crawler.Crawler()
             r = c.fetch(kwargs['search'])
             data['recipes'] = r
-            data['search'] = kwargs['research']
+            data['search'] = kwargs['search']
         mytemplate = Template(filename='search.html')
         return mytemplate.render(**data)
 
