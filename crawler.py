@@ -80,5 +80,19 @@ class Crawler(object):
             results=results
         )
 
+        self._crawl(
+            url='https://www.thespruceeats.com/search?q=%search%',
+            search=search,
+            space_delimiter="+",
+            recipe_tag="ul",
+            recipe_class="search-results-list",
+            source="thespruceeats.com",
+            img_prefix="",
+            title_tag="span",
+            title_class="card__underline",
+            img_class="card__image",
+            results=results
+        )
+
         random.shuffle(results)
         return results
